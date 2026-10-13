@@ -26,6 +26,7 @@
 .sig-major .sig-kind { background: color-mix(in srgb, var(--f-resume) 22%, transparent); color: var(--f-resume); }
 .sig-spike .sig-kind { background: color-mix(in srgb, var(--f-ship) 22%, transparent); }
 .sig-copycat .sig-kind { background: color-mix(in srgb, var(--f-dormant) 18%, transparent); color: var(--f-dormant); }
+.sig-devburn .sig-kind { background: color-mix(in srgb, var(--f-active) 25%, transparent); color: var(--f-active); }
 .sig-devsold .sig-kind { background: color-mix(in srgb, var(--down) 20%, transparent); color: var(--down); }
 .sig-main { display: flex; flex-direction: column; min-width: 0; gap: 2px; }
 .sig-main .small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

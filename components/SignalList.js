@@ -11,7 +11,8 @@ export const SIGNAL_LABEL = {
   contract: { label: 'New contract', note: 'The builder wallet deployed a new contract on Robinhood Chain.' },
   quiet: { label: 'Went quiet', note: 'No real work for 30 days.' },
   liqgone: { label: 'Liquidity gone', note: 'A pool that held real money is now close to empty. A fact, not a judgment.' },
-  devsold: { label: 'Dev sold', note: 'The deployer wallet dropped below half of its peak holding.' },
+  devburn: { label: 'Dev burned', note: 'The deployer sent its own tokens to a burn address.' },
+  devsold: { label: 'Dev sold', note: 'The deployer wallet sold more than half of its peak holding. Burns do not count.' },
   copycat: { label: 'Copycats', note: 'Other Pons tokens link the same repository.' },
 };
 

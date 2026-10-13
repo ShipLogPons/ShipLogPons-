@@ -39,12 +39,18 @@ export default async function HoldersPanel({ token, launch, pool }) {
             <dd>{fmt(d.peakPct)}</dd>
             <dt>Sold</dt>
             <dd className={d.soldPct > 0 ? 'down' : ''}>{fmt(d.soldPct)}</dd>
+            {d.burnedPct > 0 && (
+              <>
+                <dt>Burned</dt>
+                <dd>{fmt(d.burnedPct)}</dd>
+              </>
+            )}
             <dt>Sent to wallets</dt>
             <dd>{fmt(d.movedPct)}</dd>
           </dl>
           {d.peakPct > 0 && (
             <div className="devbar" aria-hidden="true">
-              <span style={{ width: `${Math.min(100, (d.nowPct / d.peakPct) * 100)}%` }} />
+              <span style={{ width: `${Math.min(100, ((d.nowPct + (d.burnedPct || 0)) / d.peakPct) * 100)}%` }} />
             </div>
           )}
           {d.movedTo.length > 0 && d.movedPct >= 0.5 && (
@@ -59,7 +65,7 @@ export default async function HoldersPanel({ token, launch, pool }) {
               .
             </p>
           )}
-          <p className="note">{st.note} Sells count transfers to the Pons curve, the DEX pool and other contracts.</p>
+          <p className="note">{st.note} Sells count transfers to the Pons curve, the DEX pool and other contracts. Transfers to 0x0 or 0x…dEaD count as burned.</p>
         </div>
       )}
 

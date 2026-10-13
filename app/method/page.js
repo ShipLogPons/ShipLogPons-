@@ -83,8 +83,9 @@ export default function Method() {
           For each builder token, Shiplog reads every Transfer event of the token from the chain and rebuilds who holds
           what. The deployer wallet is followed from launch: how much it ever held, how much it holds now, how much went
           to the Pons curve, the DEX pool or other contracts (counted as sold), and how much went to other wallets.
-          When a deployer drops below half of its peak holding, a <Link href="/signals?type=devsold">Dev sold</Link>{' '}
-          signal is raised. Holder concentration is the share of circulating supply held by the 10 largest wallets,
+          When a deployer sells more than half of its peak holding, a <Link href="/signals?type=devsold">Dev sold</Link>{' '}
+          signal is raised. Tokens the deployer burns (sent to 0x0 or 0x…dEaD) are counted as burned, never as sold, and
+          raise a Dev burned signal instead. Holder concentration is the share of circulating supply held by the 10 largest wallets,
           where circulating leaves out the curve, the pool and burned tokens. These numbers sit next to the build
           score and never change it.
         </p>
