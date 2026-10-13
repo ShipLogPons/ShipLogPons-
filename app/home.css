@@ -1,0 +1,5 @@
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 6px; }
+.hero-ctas .btn { padding: 12px 20px; }
+.btn-ghost { background: var(--card); color: var(--ink); border: 1px solid var(--rule); }
+.btn-ghost:hover { border-color: var(--ink); }
+@media (max-width: 420px) { .hero-ctas .btn { flex: 1 1 0; justify-content: center; padding: 12px 10px; } }

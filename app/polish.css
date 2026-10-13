@@ -1,0 +1,12 @@
+/* Hero stats as an even row that never wraps awkwardly. */
+.hero-stats { display: grid; grid-template-columns: repeat(3, max-content); }
+.hero-stats li, .hero-stats li + li { margin: 0; padding: 16px 32px 0; }
+.hero-stats li:first-child { padding-left: 0; }
+.hero-stats li + li { border-left: 1px solid var(--rule); }
+@media (max-width: 560px) {
+  .hero-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero-stats li, .hero-stats li + li { padding: 14px 10px 0; }
+  .hero-stats li:first-child { padding-left: 0; }
+  .hero-stats strong { font-size: 1.25rem; }
+  .hero-stats span { font-size: 0.78rem; line-height: 1.3; }
+}

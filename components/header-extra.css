@@ -1,0 +1,5 @@
+/* Room for the X button on small phones: search is also on the home page and in the menu. */
+@media (max-width: 420px) {
+  .icon-btn.search { display: none; }
+}
+.menu-tg + .menu-tg { margin-top: 10px; }
