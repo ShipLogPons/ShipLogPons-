@@ -22,7 +22,7 @@ export default async function About() {
 
         <h2>Why it exists</h2>
         <p>
-          Hundreds of tokens launch on Pons every day. Most say they are building something. A chart can show what traders
+          More than a thousand tokens launch on Pons every day. Most say they are building something. A chart can show what traders
           think, but it cannot show whether code is being written. Shiplog reads the evidence instead: commits, releases and
           contracts, each with a link you can open and check yourself.
         </p>
