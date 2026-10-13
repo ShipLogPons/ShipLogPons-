@@ -6,6 +6,8 @@ import SiteHeader from '@/components/SiteHeader';
 import { Wordmark } from '@/components/Logo';
 import { NAV_GROUPS } from '@/lib/nav';
 import { SITE } from '@/lib/telegram';
+import { Suspense } from 'react';
+import OfficialCA from '@/components/OfficialCA';
 
 export const metadata = {
   metadataBase: new URL(SITE),
@@ -61,6 +63,9 @@ export default function RootLayout({ children }) {
               ))}
             </nav>
             <div className="foot-meta">
+              <Suspense fallback={null}>
+                <OfficialCA />
+              </Suspense>
               <div>
                 <Wordmark size={26} />
                 <p>
