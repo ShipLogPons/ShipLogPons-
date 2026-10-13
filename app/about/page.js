@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import '../pages.css';
 import { getIndex, counts } from '@/lib/data';
-import { BOT_URL, X_URL } from '@/lib/nav';
+import { BOT_URL, X_URL, GITHUB_URL } from '@/lib/nav';
 
 export const metadata = { title: 'About' };
 export const dynamic = 'force-dynamic';
@@ -63,6 +63,13 @@ export default async function About() {
           the <a href={BOT_URL} target="_blank" rel="noopener noreferrer">Shiplog Telegram bot</a>, list your
           project on <Link href="/submit">Submit</Link>, report a mistake on <Link href="/corrections">Corrections</Link>, or use the
           data yourself through the <Link href="/docs">open API</Link>.
+        </p>
+
+        <h2>Open source</h2>
+        <p>
+          All of Shiplog's code is public on{' '}
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>, so anyone can check exactly how
+          builders are read and scored.
         </p>
       </div>
     </section>

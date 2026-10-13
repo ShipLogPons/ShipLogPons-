@@ -1,5 +1,9 @@
 /* Room for the X button on small phones: search is also on the home page and in the menu. */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .icon-btn.search { display: none; }
+}
+/* The GitHub link lives in the menu on phones. */
+@media (max-width: 420px) {
+  .icon-btn.gh { display: none; }
 }
 .menu-tg + .menu-tg { margin-top: 10px; }
