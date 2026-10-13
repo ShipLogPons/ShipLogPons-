@@ -143,7 +143,7 @@ export default function SiteHeader() {
               <span className="tg-dot"><GitHubIcon /></span>
               <span>
                 <strong>Source code on GitHub</strong>
-                <small>ShipLogPons/shiplogpons-</small>
+                <small>ShipLogPons/ShipLogPons-</small>
               </span>
             </a>
           </div>
